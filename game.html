@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="game-shell">
+    <div class="top-bar">
+      <div class="titles">
+        <h1>Snake Arcade</h1>
+        <p>Eat, grow, dodge the obstacles, and beat your best score.</p>
+      </div>
+      <div class="controls">
+        <button class="btn-primary" id="startBtn">Start / Restart</button>
+        <button class="btn-secondary" id="pauseBtn">Pause</button>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="game-card">
+        <div class="canvas-frame">
+          <canvas id="gameCanvas" width="420" height="420"></canvas>
+          <div class="overlay" id="overlay">
+            <div class="overlay-box">
+              <h2 id="overlayTitle">Ready?</h2>
+              <p id="overlayText">Press Start to begin.</p>
+              <button class="btn-primary" id="overlayBtn">Start Game</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="status-bar">
+          <div class="stat"><b id="scoreValue">0</b><span>Score</span></div>
+          <div class="stat"><b id="bestValue">0</b><span>Best</span></div>
+          <div class="stat"><b id="speedValue">1x</b><span>Speed</span></div>
+        </div>
+
+        <div class="mobile-controls">
+          <button class="btn-secondary" data-dir="up">↑</button>
+          <button class="btn-secondary" data-dir="left">←</button>
+          <button class="btn-secondary" data-dir="down">↓</button>
+          <button class="btn-secondary" data-dir="right">→</button>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h2>How to Play</h2>
+        <ul>
+          <li>Use arrow keys or WASD to move.</li>
+          <li>Eat the glowing food to grow and increase speed.</li>
+          <li>Avoid walls, your tail, and the red obstacles.</li>
+          <li>Every few points make the game faster.</li>
+        </ul>
+        <h2>Game Features</h2>
+        <p>Obstacles are placed in the arena, the speed ramps up as you score, and your highest score is saved automatically.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
